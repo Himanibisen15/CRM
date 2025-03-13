@@ -1,7 +1,6 @@
 #include <stdio.h> //header file including
 
 #define MAX_CUSTOMERS 100  //macros definition
-#define SIZE 10
 
 // Structure to store customer information && type declaration
 struct Customer {
@@ -12,35 +11,33 @@ struct Customer {
     char email[100];        // Customer's email address
     char interactionHistory[500]; // Description of interactions with the customer
 };
-struct Customer c[SIZE]; //global variable
+struct Customer c1; //global variable
 
 void acceptInput(){
     //UI logic : accepting input from user
-    for (int i=0; i< SIZE-1 ; i++){
-        printf("Enter details of customer %d\n", i+1);
     printf("Enter customerID:");
-    scanf("%s",&c[i].customerID);
+    scanf("%s",&c1.customerID);
     printf("Enter name:");
-    scanf("%s",&c[i].name);
+    scanf("%s",&c1.name);
     printf("Enter address:");
-    scanf("%s",&c[i].address);
+    scanf("%s",&c1.address);
     printf("Enter phone:");
-    scanf("%s",&c[i].phone);
+    scanf("%s",&c1.phone);
     printf("Enter email:");
-    scanf("%s",&c[i].email);
+    scanf("%s",&c1.email);
     printf("Enter interactionHistory:");
-    scanf("%s",&c[i].interactionHistory);}
+    scanf("%s",&c1.interactionHistory);
+
 }
 
 void displayOutput(){
     //UI logic: displaying output to user
-    for (int i = 0; i <SIZE-1; i++){
-    printf("customerID: %d\n",c[i].customerID);
-    printf("Name: %s\n", c[i].name);
-    printf("address: %s\n", c[i].address);
-    printf("phone: %s\n",c[i].phone);
-    printf("email: %s\n", c[i].email);
-    printf("interactionHistory: %s\n", c[i].interactionHistory);}
+    printf("customerID: %s\n", c1.customerID);
+    printf("Name: %d\n", c1.name);
+    printf("address: %s\n", c1.address);
+    printf("phone: %s\n", c1.phone);
+    printf("email: %d\n", c1.email);
+    printf("interactionHistory: %s\n", c1.interactionHistory);
 }
 int main(){
     acceptInput();

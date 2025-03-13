@@ -13,23 +13,6 @@ struct Customer {
 };
 struct Customer c1; //global variable
 
-void acceptInput(){
-    //UI logic : accepting input from user
-    printf("Enter customerID:");
-    scanf("%s",&c1.customerID);
-    printf("Enter name:");
-    scanf("%s",&c1.name);
-    printf("Enter address:");
-    scanf("%s",&c1.address);
-    printf("Enter phone:");
-    scanf("%s",&c1.phone);
-    printf("Enter email:");
-    scanf("%s",&c1.email);
-    printf("Enter interactionHistory:");
-    scanf("%s",&c1.interactionHistory);
-
-}
-
 void displayOutput(){
     //UI logic: displaying output to user
     printf("customerID: %s\n", c1.customerID);
@@ -40,10 +23,11 @@ void displayOutput(){
     printf("interactionHistory: %s\n", c1.interactionHistory);
 }
 int main(){
-    acceptInput();
     displayOutput();
     return 0;
 
 
 
 }
+ 
+   

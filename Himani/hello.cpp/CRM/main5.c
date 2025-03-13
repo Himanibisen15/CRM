@@ -69,6 +69,17 @@ void update(int index){
     scanf("%s",&c[index].interactionHistory);
 }
 
+void remove(int index){
+    printf("\n Remove Existing %d the customer Details\n",index+1);
+    c[index].customerID='\0';
+    c[index].name[0]=0;
+    c[index].address[0]='\0';
+    c[index].phone[0]='\0';
+    c[index].email[0]='\0';
+    c[index].interactionHistory[0]='\0';
+
+
+}
 
 int main(){
     int choice;
@@ -89,7 +100,8 @@ int main(){
             case 1: showAll(); break;
             case 2: update(2); break;
             case 3: show(3); break;
-            case 4: return 0;
+            case 4: remove(2);break;
+            case 5: return 0;
             default: printf("Invalid choice. Try again.\n");
         }
     }

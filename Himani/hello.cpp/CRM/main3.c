@@ -69,28 +69,17 @@ void update(int index){
     scanf("%s",&c[index].interactionHistory);
 }
 
-
+//Entry Point Function
 int main(){
-    int choice;
-    while(1){
-        printf("\nCuctomer Relationship Management \n");
-        printf("=======================================\n");
-       
-        printf("1. View All Customer\n");
-        printf("2. Update Customer Information\n");
-        printf("3. show Customer\n");
-        printf("4. Exit\n");
-        printf("Enter your choice (1-4): ");
-        scanf("%d", &choice);
+    acceptAll();
+    showAll();
 
-        acceptAll();
-        switch (choice) {
-           
-            case 1: showAll(); break;
-            case 2: update(2); break;
-            case 3: show(3); break;
-            case 4: return 0;
-            default: printf("Invalid choice. Try again.\n");
-        }
-    }
+    int index;
+    printf("Enter index to show details: ");
+    scanf("%d", &index);
+   
+    show(index);
+    update(index);
+    showAll();
+    return 0;
 }
