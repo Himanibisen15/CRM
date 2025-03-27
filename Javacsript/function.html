@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="greeting"> call greet function
+    </button>
+    <button type="button" onclick="welcome('Himani','Krishna','Kedar')">call welcome function</button>
+    <hr>
+    <img id="d4" src="./324.jpg" alt="bee" height="300px" width="300px">
+    <br>
+    <button type="button" onclick="changeImage()">changeImage</button>
+    <script>
+        function changeImage(){
+         document.getElementById("d4").src="./1234.jpg";
+        }
+        //1. default function
+        function greeting(){
+            window.alert("This is Himani Bisen from Raipur");
+        }
+        //greetings();
+        function welcome(std1,std2,std3){
+            console.log(`Welcome You ${std1},${std2},${std3} In YCP AIT`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img1" src="./1234.jpg" alt="1234"> <br>
+    <button type="button" onclick="hideAndShow('hide')">Hide</button>
+    <button type="button" onclick="hideAndShow('show')">Show</button>
+    <script>
+        function hideAndShow(value){
+            if(value=="hide"){
+                document.getElementById("img1").style.display ="none";
+
+            }
+            else if(value=="show"){
+                document.getElementById("img1").style.display ="inline";
+
+            }
+        }
+    </script>
+
+</body>
+</html>
